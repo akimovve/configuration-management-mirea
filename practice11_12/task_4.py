@@ -1,83 +1,69 @@
 from hypothesis import given
 from hypothesis.strategies import builds, integers, recursive
 
-# Задание 4. Генерирация случайных бинарных деревьев
+# Задание 4. Генерация случайных бинарных деревьев
 class Node:
 
 	# Инициализация узла
-	# @param val - число (значение)
-	# @param nxt - потомок (по умолчанию None)
-	def __init__(self, val, nxt=None):
-		self.__val = val
-		self.__left = None
-		self.__right = None
-		if nxt is None:
-			return
-		if self.__val < nxt.__val:
-			self.__right = nxt
-		else:
-			self.__left = nxt
+	def __init__(self, val, left=None, right=None):
+		self.val = val
+		self.left = left
+		self.right = right
 
 	# Добавление узла (в зависимости от значения)
 	# @return - узел
 	def add(self, val):
-		if self.__val is None or self.__val == val:
-			self.__val = val
+		if self.val is None or self.val == val:
+			self.val = val
 			return self
-		if self.__val < val:
-			if self.__right is None:
-				self.__right = Node(val)
+		if self.val < val:
+			if self.right is None:
+				self.right = Node(val)
 			else:
-				self.__right.add(val)
+				self.right.add(val)
 		else:
-			if self.__left is None:
-				self.__left = Node(val)
+			if self.left is None:
+				self.left = Node(val)
 			else:
-				self.__left.add(val)
+				self.left.add(val)
 		return self
 
 	# Поиск по значению
 	def find_by_val(self, val):
-		if self.__val is None:
+		if self.val is None:
 			return False
-		if self.__val == val:
+		if self.val == val:
 			return True
-		if self.__val < val:
-			return self.__right.find_by_val(val)
-		return self.__left.find_by_val(val)
+		if self.val < val:
+			return self.right.find_by_val(val)
+		return self.left.find_by_val(val)
 
 	def count_branches_height(self):
 		right_height = left_height = 0
-		if self.__right is not None:
-			right_height = self.__right.height()
-		if self.__left is not None:
-			left_height = self.__left.height()
+		if self.right is not None:
+			right_height = self.right.height()
+		if self.left is not None:
+			left_height = self.left.height()
 		return left_height, right_height
 
 	# Подсчёт высоты дерева
 	def height(self):
-		if self.__val is None:
+		if self.val is None:
 			return 0
 		return max(self.count_branches_height()) + 1
 
-	# Вывод дерева
-	def print(self, depth):
-		if self.__right is not None:
-			self.__right.print(depth + 1)
-		print("\t" * depth, end="")
-		print(self.__val, end=" <\n")
-		if self.__left is not None:
-			self.__left.print(depth + 1)
+	def __repr__(self):
+		return "Tree(val=%s, left=%s, right=%s)" % (self.val, self.left, self.right)
 
 
 # Тестирование
 @given(x=recursive(
 		builds(Node, integers()),
-		lambda i: builds(Node, integers(), i), max_leaves=100),
+		lambda i: builds(Node, integers(), i, i), max_leaves=100),
 		a=integers(),
 		b=integers()
 )
-def test_property(x, a, b):
+def test_tree(x, a, b):
 	# Поиск по ключу
 	x.add(a)
 	x.add(b)
@@ -89,5 +75,8 @@ def test_property(x, a, b):
 	new = x.add(a).height()
 	assert new == prev or new == prev + 1
 
-	x.print(0)
+	print("\n\nВывод дерева:")
+	print(x)
 	print("****************************************************************")
+
+test_tree()
