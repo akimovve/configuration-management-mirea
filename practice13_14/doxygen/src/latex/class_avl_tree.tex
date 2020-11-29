@@ -1,0 +1,297 @@
+\hypertarget{class_avl_tree}{}\doxysection{Шаблон класса Avl\+Tree$<$ T extends Comparable$<$ T $>$}
+\label{class_avl_tree}\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+
+
+Граф наследования\+:Avl\+Tree$<$ T extends Comparable$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{class_avl_tree__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса Avl\+Tree$<$ T extends Comparable$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=183pt]{class_avl_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_avl_tree_a435d556560bd7bbf298bbd7fb42b599e}{Avl\+Tree}} ()
+\item 
+\mbox{\hyperlink{class_avl_tree_a4fd9e82849788f4b50db2eed645677f2}{Avl\+Tree}} (T value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+Node \mbox{\hyperlink{class_avl_tree_ab10fc06bbc41a63903db31fe505c707d}{insert\+Node}} (Node node, T value)
+\item 
+Node \mbox{\hyperlink{class_avl_tree_a97e14977d201ffea1473e2bcac253506}{remove}} (Node node, T value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_avl_tree_a04d649b31db8abf2ef4479591335e272}{update\+Branch\+Height}} (Node node)
+\item 
+int \mbox{\hyperlink{class_avl_tree_ad6fa4a95e8c42488e311d5324c669d7b}{get\+Branch\+Height}} (Node node)
+\item 
+int \mbox{\hyperlink{class_avl_tree_a32f8cf5ab36925bfde4112e5a9a65417}{compare\+Branches\+Length}} (Node node)
+\item 
+Node \mbox{\hyperlink{class_avl_tree_a1536acd2b0028ad2683443efc61b8ed5}{balance}} (Node node)
+\item 
+Node \mbox{\hyperlink{class_avl_tree_a254c21e657993ab9fbf9434ff3f31c61}{left\+Rotate}} (Node node)
+\item 
+Node \mbox{\hyperlink{class_avl_tree_a1d3bf0470a7c94fe737ae48ccaf75445}{right\+Rotate}} (Node node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Дополнительные унаследованные члены}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_avl_tree_a435d556560bd7bbf298bbd7fb42b599e}\label{class_avl_tree_a435d556560bd7bbf298bbd7fb42b599e}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!AvlTree@{AvlTree}}
+\index{AvlTree@{AvlTree}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AvlTree()}{AvlTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.\mbox{\hyperlink{class_avl_tree}{Avl\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Пустой конструктор дерева \mbox{\Hypertarget{class_avl_tree_a4fd9e82849788f4b50db2eed645677f2}\label{class_avl_tree_a4fd9e82849788f4b50db2eed645677f2}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!AvlTree@{AvlTree}}
+\index{AvlTree@{AvlTree}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{AvlTree()}{AvlTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.\mbox{\hyperlink{class_avl_tree}{Avl\+Tree}} (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор дерева 
+\begin{DoxyParams}{Аргументы}
+{\em value} & Элемент дерева \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_avl_tree_a1536acd2b0028ad2683443efc61b8ed5}\label{class_avl_tree_a1536acd2b0028ad2683443efc61b8ed5}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!balance@{balance}}
+\index{balance@{balance}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{balance()}{balance()}}
+{\footnotesize\ttfamily Node \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.balance (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Балансировка ветвей для АВЛ-\/дерева 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a1536acd2b0028ad2683443efc61b8ed5_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_avl_tree_a1536acd2b0028ad2683443efc61b8ed5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_a32f8cf5ab36925bfde4112e5a9a65417}\label{class_avl_tree_a32f8cf5ab36925bfde4112e5a9a65417}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!compareBranchesLength@{compareBranchesLength}}
+\index{compareBranchesLength@{compareBranchesLength}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{compareBranchesLength()}{compareBranchesLength()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.compare\+Branches\+Length (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Сопоставление длин высот ветвей дерева 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Разность высот 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a32f8cf5ab36925bfde4112e5a9a65417_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a32f8cf5ab36925bfde4112e5a9a65417_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_ad6fa4a95e8c42488e311d5324c669d7b}\label{class_avl_tree_ad6fa4a95e8c42488e311d5324c669d7b}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!getBranchHeight@{getBranchHeight}}
+\index{getBranchHeight@{getBranchHeight}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getBranchHeight()}{getBranchHeight()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.get\+Branch\+Height (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Получение высоты ветви 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Высота 
+\end{DoxyReturn}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_ad6fa4a95e8c42488e311d5324c669d7b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_ab10fc06bbc41a63903db31fe505c707d}\label{class_avl_tree_ab10fc06bbc41a63903db31fe505c707d}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily Node \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.insert\+Node (\begin{DoxyParamCaption}\item[{Node}]{node,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Добавление элемента в АВЛ дерево 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел для добавления \\
+\hline
+{\em value} & Элемент для добавления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел, добавленный в дерево 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_ab10fc06bbc41a63903db31fe505c707d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_a254c21e657993ab9fbf9434ff3f31c61}\label{class_avl_tree_a254c21e657993ab9fbf9434ff3f31c61}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!leftRotate@{leftRotate}}
+\index{leftRotate@{leftRotate}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{leftRotate()}{leftRotate()}}
+{\footnotesize\ttfamily Node \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.left\+Rotate (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Левый поворот 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a254c21e657993ab9fbf9434ff3f31c61_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a254c21e657993ab9fbf9434ff3f31c61_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_a97e14977d201ffea1473e2bcac253506}\label{class_avl_tree_a97e14977d201ffea1473e2bcac253506}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily Node \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.remove (\begin{DoxyParamCaption}\item[{Node}]{node,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Функция удаления узла из АВЛ дерева 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел, из которого происходит удаление \\
+\hline
+{\em value} & Элемент, который необходимо удалить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a97e14977d201ffea1473e2bcac253506_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_a1d3bf0470a7c94fe737ae48ccaf75445}\label{class_avl_tree_a1d3bf0470a7c94fe737ae48ccaf75445}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!rightRotate@{rightRotate}}
+\index{rightRotate@{rightRotate}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rightRotate()}{rightRotate()}}
+{\footnotesize\ttfamily Node \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.right\+Rotate (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Правый поворот 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел 
+\end{DoxyReturn}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a1d3bf0470a7c94fe737ae48ccaf75445_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a1d3bf0470a7c94fe737ae48ccaf75445_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_avl_tree_a04d649b31db8abf2ef4479591335e272}\label{class_avl_tree_a04d649b31db8abf2ef4479591335e272}} 
+\index{AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}!updateBranchHeight@{updateBranchHeight}}
+\index{updateBranchHeight@{updateBranchHeight}!AvlTree$<$ T extends Comparable$<$ T $>$@{AvlTree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{updateBranchHeight()}{updateBranchHeight()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_avl_tree}{Avl\+Tree}}$<$ T extends Comparable$<$ T $>$.update\+Branch\+Height (\begin{DoxyParamCaption}\item[{Node}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Обновление значения высоты ветви 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел для проверки \\
+\hline
+\end{DoxyParams}
+Граф вызовов\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a04d649b31db8abf2ef4479591335e272_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_avl_tree_a04d649b31db8abf2ef4479591335e272_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_avl_tree_8java}{Avl\+Tree.\+java}}\end{DoxyCompactItemize}

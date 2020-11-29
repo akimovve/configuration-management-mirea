@@ -1,0 +1,145 @@
+\documentclass{article}\usepackage{noweb}\pagestyle{noweb}\noweboptions{}\begin{document}\nwfilename{pr.nw}\nwbegindocs{0}\section*{Быстрая сортировка}% ===> this file was generated automatically by noweave --- better not edit it
+
+\footnote{Разработал Акимов В.Е.}
+
+Рассмотрим реализацию одной из самых популярных сортировок на примере языка \texttt{Java}.
+
+\nwenddocs{}\nwbegincode{1}\moddef{sort.java}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+public static void main(String[] args) \{
+        \LA{}Исходный массив\RA{}
+        \LA{}Вызов функции сортировки\RA{}
+        \LA{}Вывод результата\RA{}
+\}
+\nwendcode{}\nwbegindocs{2}\nwdocspar
+
+
+
+Исходный массив, который необходимо отсортировать.
+
+\nwenddocs{}\nwbegincode{3}\moddef{Исходный массив}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+int[] testArray = \{32, -3, 99, 71, 1, -5, 0, 8, 44\};
+\nwendcode{}\nwbegindocs{4}\nwdocspar
+
+
+
+Вызов функции.
+
+\nwenddocs{}\nwbegincode{5}\moddef{Вызов функции сортировки}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+quickSort(0, testArray.length - 1, testArray);
+\nwendcode{}\nwbegindocs{6}\nwdocspar
+
+
+
+Реализация функции сортировки.
+
+\nwenddocs{}\nwbegincode{7}\moddef{sort.java}\plusendmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+public static void quickSort(int begin, int end, int[] array) \{
+        \LA{}Проверка\RA{}
+        \LA{}Опорный элемент\RA{}
+        \LA{}Создание переменных\RA{}
+        \LA{}Цикл\RA{}
+        
+        \LA{}Сортировка слева\RA{}
+        \LA{}Сортировка справа\RA{}
+\}
+\nwendcode{}\nwbegindocs{8}\nwdocspar
+
+
+
+Проверка на длину исходного массива и на совпадение левой и правой его границы.
+
+\nwenddocs{}\nwbegincode{9}\moddef{Проверка}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+if (array.length == 0 || end <= begin) \{
+        return;
+\}
+\nwendcode{}\nwbegindocs{10}\nwdocspar
+
+
+
+Опорный элемент для быстрой сортировки может быть любым. В данном примере он находится в середине массива для того, чтобы увеличить скорость сортировки.
+
+\nwenddocs{}\nwbegincode{11}\moddef{Опорный элемент}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+int pivot = array[(begin + end) / 2];
+\nwendcode{}\nwbegindocs{12}\nwdocspar
+
+
+
+Создадим переменные для прохождения по элементам массива.
+
+\nwenddocs{}\nwbegincode{13}\moddef{Создание переменных}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+int b = begin, e = end;
+\nwendcode{}\nwbegindocs{14}\nwdocspar
+
+
+
+Суть алгоритма быстрой сортировки заключается в разбиении массива на две части по опорному элементу и перемещении элементов, меньших опорному справой стороны на левую, а больших с левой на правую (при сортировки по возрастанию). Для этого необходим цикл, заданный ниже.
+
+\nwenddocs{}\nwbegincode{15}\moddef{Цикл}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+while (b <= e) \{
+        \LA{}Нахождение индекса большего элемента\RA{}
+        \LA{}Нахождение индекса меньшего элемента\RA{}
+        \LA{}Обмен\RA{}
+\}
+\nwendcode{}\nwbegindocs{16}\nwdocspar
+
+
+
+Изначально необходимо найти элемент (его индекс), который больше опорного для переноса его с левой части на правую. 
+
+\nwenddocs{}\nwbegincode{17}\moddef{Нахождение индекса большего элемента}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+while (array[b] < pivot) \{
+        b++;
+\}
+\nwendcode{}\nwbegindocs{18}\nwdocspar
+
+
+
+Аналогично для элемента, меньшего опорного.
+
+\nwenddocs{}\nwbegincode{19}\moddef{Нахождение индекса меньшего элемента}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+while (array[e] > pivot) \{
+        e--;
+\}
+\nwendcode{}\nwbegindocs{20}\nwdocspar
+
+
+
+После нахождения этих индексов необходимо поменять местами эти элементы и изменить переменные для дальнейшего прохода по циклу.
+
+\nwenddocs{}\nwbegincode{21}\moddef{Обмен}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+if (b <= e) \{
+        int temp = array[b];
+        array[b++] = array[e];
+        array[e--] = temp;
+\}
+\nwendcode{}\nwbegindocs{22}\nwdocspar
+
+
+
+Если переменная \texttt{e} будет больше, чем начальная позиция массива, что говорит о том, что с левой стороны относительно опорного элемента имеются элементы, то необходимо рекурсивно вызвать функцию, передав необходимые параметры.
+
+\nwenddocs{}\nwbegincode{23}\moddef{Сортировка слева}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+if (begin < e) \{
+        quickSort(begin, e, array);
+\}
+\nwendcode{}\nwbegindocs{24}\nwdocspar
+
+
+
+Аналогичная проверка для переменной \texttt{b} относительно конечной позиции массива и вызов функции рекурсивно.
+
+\nwenddocs{}\nwbegincode{25}\moddef{Сортировка справа}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+if (end > b) \{
+        quickSort(b, end, array);
+\}
+\nwendcode{}\nwbegindocs{26}\nwdocspar
+
+
+
+Для вывода отсортированного массива воспользуемся \texttt{Stream API}.
+
+\nwenddocs{}\nwbegincode{27}\moddef{Вывод результата}\endmoddef\nwstartdeflinemarkup\nwenddeflinemarkup
+Arrays.stream(testArray).forEach(el -> System.out.print(el + " "));
+\nwendcode{}\nwbegindocs{28}\nwdocspar
+\nwenddocs{}\end{document}
+

@@ -1,0 +1,56 @@
+Hospital: Invitro
+Address: Wall Str.
+Doctors:
+	Name: Jeremy Martin
+	Age: 39
+	Speciality: Dentist
+	ID: 11841
+Patients:
+	173: Martin Garrix	
+
+	Name: Ulan Bator
+	Age: 86
+	Speciality: Pediatrician
+	ID: 74381
+Patients:
+	717: Will Smith		111: Migel Jewer	
+
+Nurses:
+	Name: Kira Syrok
+	Age: 21
+	Work Department: Dentistry
+	ID: 87123
+Schedule:
+	Friday: 06.00 am - 10.30 pm
+
+
+	Name: Mary Chris
+	Age: 18
+	Work Department: Psyche
+	ID: 51972
+Schedule:
+	Tuesday: 09.30 am - 06.30 pm
+	Sunday: 09.30 am - 09.30 pm
+
+
+	Name: Olga Brain
+	Age: 27
+	Work Department: Dentistry
+	ID: 98547
+Schedule:
+	Wednesday: 10.00 am - 04.30 pm
+
+
+	Name: Michele Wild
+	Age: 26
+	Work Department: Psyche
+	ID: 20817
+Schedule:
+	No schedule
+
+	Name: Liza Smigline
+	Age: 19
+	Work Department: Dentistry
+	ID: 10293
+Schedule:
+	No schedule

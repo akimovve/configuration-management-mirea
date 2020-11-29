@@ -1,0 +1,226 @@
+\hypertarget{class_tree}{}\doxysection{Шаблон класса Tree$<$ T extends Comparable$<$ T $>$}
+\label{class_tree}\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+
+
+Граф связей класса Tree$<$ T extends Comparable$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{class_tree__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_tree_1_1_node}{Node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_a04a8b8e8fddc04789c3936f361db37c0}{Tree}} ()
+\item 
+\mbox{\hyperlink{class_tree_a08ade5aff4e814b74965f1864624f919}{Tree}} (T value)
+\item 
+final void \mbox{\hyperlink{class_tree_a30e3c28cf9468c51de02501680ba6c6f}{add\+Node}} (T... values)
+\item 
+void \mbox{\hyperlink{class_tree_acdc247d922c526171f354d6a8a634831}{add\+Node}} (T value)
+\item 
+void \mbox{\hyperlink{class_tree_a161ebac6bd0317536848449681a78194}{remove}} (T value)
+\item 
+void \mbox{\hyperlink{class_tree_a2e542d47e17c94abb4a447d63cc59fd0}{print}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree_a3ff162eee709b652949200a7e367b259}{insert\+Node}} (\mbox{\hyperlink{class_tree_1_1_node}{Node}} node, T value)
+\item 
+\mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree_a867cc589eb6c5cbd728513122fea9171}{remove}} (\mbox{\hyperlink{class_tree_1_1_node}{Node}} node, T value)
+\item 
+\mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree_a2ca7e9e24ccadff7b995dc33e8627a96}{min\+Value\+In\+Right\+Branch}} (\mbox{\hyperlink{class_tree_1_1_node}{Node}} node)
+\end{DoxyCompactItemize}
+\doxysubsection*{Защищенные данные}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree_a04c2f6d882307c2b4248a0ae8bfbdc2e}{parent}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Закрытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_tree_acd9ddfd3ffa472cc00b9f2a00acbaa5c}{print\+Tree}} (\mbox{\hyperlink{class_tree_1_1_node}{Node}} node, int level)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Конструктор(ы)}
+\mbox{\Hypertarget{class_tree_a04a8b8e8fddc04789c3936f361db37c0}\label{class_tree_a04a8b8e8fddc04789c3936f361db37c0}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.\mbox{\hyperlink{class_tree}{Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Пустой конструктор дерева \mbox{\Hypertarget{class_tree_a08ade5aff4e814b74965f1864624f919}\label{class_tree_a08ade5aff4e814b74965f1864624f919}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!Tree@{Tree}}
+\index{Tree@{Tree}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Tree()}{Tree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.\mbox{\hyperlink{class_tree}{Tree}} (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Конструктор дерева 
+\begin{DoxyParams}{Аргументы}
+{\em value} & Элемент дерева \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_tree_acdc247d922c526171f354d6a8a634831}\label{class_tree_acdc247d922c526171f354d6a8a634831}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!addNode@{addNode}}
+\index{addNode@{addNode}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.add\+Node (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Добавление одного элемента в дерево 
+\begin{DoxyParams}{Аргументы}
+{\em value} & Элемент для добавления \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_tree_a30e3c28cf9468c51de02501680ba6c6f}\label{class_tree_a30e3c28cf9468c51de02501680ba6c6f}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!addNode@{addNode}}
+\index{addNode@{addNode}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addNode()}{addNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily final void \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.add\+Node (\begin{DoxyParamCaption}\item[{T...}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Добавление последовательности элементов в дерево 
+\begin{DoxyParams}{Аргументы}
+{\em values} & Последовательность элементов \\
+\hline
+\end{DoxyParams}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_tree_a30e3c28cf9468c51de02501680ba6c6f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a3ff162eee709b652949200a7e367b259}\label{class_tree_a3ff162eee709b652949200a7e367b259}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!insertNode@{insertNode}}
+\index{insertNode@{insertNode}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insertNode()}{insertNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.insert\+Node (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_1_1_node}{Node}}}]{node,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Добавление элемента в дерево 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел для добавления \\
+\hline
+{\em value} & Элемент для добавления \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел, добавленный в дерево 
+\end{DoxyReturn}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{class_tree_a3ff162eee709b652949200a7e367b259_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a2ca7e9e24ccadff7b995dc33e8627a96}\label{class_tree_a2ca7e9e24ccadff7b995dc33e8627a96}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!minValueInRightBranch@{minValueInRightBranch}}
+\index{minValueInRightBranch@{minValueInRightBranch}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{minValueInRightBranch()}{minValueInRightBranch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.min\+Value\+In\+Right\+Branch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_1_1_node}{Node}}}]{node }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Поиск наименьшего числа в левой ветви 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел, в котором необходимо искать 
+\end{DoxyReturn}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_tree_a2ca7e9e24ccadff7b995dc33e8627a96_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a2e542d47e17c94abb4a447d63cc59fd0}\label{class_tree_a2e542d47e17c94abb4a447d63cc59fd0}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!print@{print}}
+\index{print@{print}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Печать дерева в консоль Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_tree_a2e542d47e17c94abb4a447d63cc59fd0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_acd9ddfd3ffa472cc00b9f2a00acbaa5c}\label{class_tree_acd9ddfd3ffa472cc00b9f2a00acbaa5c}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!printTree@{printTree}}
+\index{printTree@{printTree}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{printTree()}{printTree()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.print\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_1_1_node}{Node}}}]{node,  }\item[{int}]{level }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+Печать дерева 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел для печати \\
+\hline
+{\em level} & Глубина дерева \\
+\hline
+\end{DoxyParams}
+Граф вызова функции\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{class_tree_acd9ddfd3ffa472cc00b9f2a00acbaa5c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_tree_a867cc589eb6c5cbd728513122fea9171}\label{class_tree_a867cc589eb6c5cbd728513122fea9171}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_tree_1_1_node}{Node}}}]{node,  }\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Функция удаления 
+\begin{DoxyParams}{Аргументы}
+{\em node} & Узел, из которого происходит удаление \\
+\hline
+{\em value} & Элемент, который необходимо удалить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+Узел 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_tree_a161ebac6bd0317536848449681a78194}\label{class_tree_a161ebac6bd0317536848449681a78194}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!remove@{remove}}
+\index{remove@{remove}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.remove (\begin{DoxyParamCaption}\item[{T}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Удаление элемента из дерева 
+\begin{DoxyParams}{Аргументы}
+{\em value} & Элемент для удаления из дерева \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Данные класса}
+\mbox{\Hypertarget{class_tree_a04c2f6d882307c2b4248a0ae8bfbdc2e}\label{class_tree_a04c2f6d882307c2b4248a0ae8bfbdc2e}} 
+\index{Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}!parent@{parent}}
+\index{parent@{parent}!Tree$<$ T extends Comparable$<$ T $>$@{Tree$<$ T extends Comparable$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_tree_1_1_node}{Node}} \mbox{\hyperlink{class_tree}{Tree}}$<$ T extends Comparable$<$ T $>$.parent\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_tree_8java}{Tree.\+java}}\end{DoxyCompactItemize}

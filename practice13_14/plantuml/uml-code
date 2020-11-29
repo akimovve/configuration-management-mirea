@@ -1,0 +1,32 @@
+@startuml
+
+skinparam monochrome true
+skinparam shadowing false
+
+actor "Студент Акимов В.Е." as student
+database "Piazza" as piazza
+actor "Преподаватель" as professor
+
+professor -> piazza : Публикация задачи
+activate piazza
+professor <-- piazza : Задача опубликована
+deactivate piazza
+...
+student -> piazza : Поиск задач
+activate piazza
+student <-- piazza : Получение задачи
+deactivate piazza
+...
+professor -> piazza : Поиск решений
+activate piazza
+professor <-- piazza : Решение найдено
+professor -> piazza : Публикация оценки
+professor <-- piazza : Оценка опубликована
+deactivate piazza
+...
+student -> piazza : Проверка оценки
+activate piazza
+student <-- piazza : Оценка получена
+deactivate piazza
+
+@enduml
